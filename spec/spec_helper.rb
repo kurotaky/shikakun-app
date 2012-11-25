@@ -18,4 +18,7 @@ end
 RSpec.configure do |config|
   config.include Rack::Test::Methods
   config.include MyTestMethods
+  config.around(:each) do |example|
+    DB.transaction(:rollback=>:always){example.run}
+  end
 end
