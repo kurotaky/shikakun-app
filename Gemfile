@@ -1,4 +1,5 @@
 source :rubygems
+
 gem 'sinatra'
 gem 'omniauth'
 gem 'omniauth-twitter'
@@ -9,3 +10,9 @@ gem 'twitter'
 gem 'sinatra-flash', require: "sinatra/flash"
 gem 'shotgun'
 gem 'mysql2'
+gem 'rake'
+
+group :test do
+  gem "rspec"
+  gem "rack-test"
+end

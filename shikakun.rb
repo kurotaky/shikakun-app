@@ -1,7 +1,13 @@
 # coding: utf-8
+require 'sinatra'
+require 'sinatra/flash'
+require 'sequel'
+require 'omniauth'
+require 'omniauth-twitter'
+require 'twitter'
 
 # mode development/production
-mode = "production"
+mode = "development"
 
 Sequel::Model.plugin(:schema)
 
